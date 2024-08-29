@@ -46,8 +46,8 @@ function PostProvider({ children }) {
 }
 
 function usePosts() {
-  if (context === undefined) throw new Error('PostContext was used outside PostProvider');
   const context = useContext(PostContext);
+  if (context === undefined) throw new Error('PostContext was used outside PostProvider');
   return context;
 }
 
